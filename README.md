@@ -16,7 +16,7 @@ The player will be able to choose a character and continue through five differen
 * (https://trello.com/b/lmHfuOh1/project-one)
 
 
-## Technoligies
+## Technologies
  * CSS
  *  HTML
  *  Javascript
