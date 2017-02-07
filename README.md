@@ -29,6 +29,6 @@ The player will be able to choose a character and continue through five differen
  
  ![lofi_wireframe2] (/Users/svetmaillet/code/Project1/Assets/IMG_3473.JPG)
  
- ![lofi_wireframe3] (/Users/svetmaillet/code/Project1/Assets/IMG_3474.JPG)
+ ![lofi_wireframe3] (Project1/Assets/IMG_3474.JPG)
  
  
