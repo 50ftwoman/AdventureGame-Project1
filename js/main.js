@@ -72,13 +72,35 @@ var $buttonOptions = [
   {sixASecond: "Step right!"},
   {sevenAFirst: "yes"}, //end game return home
   {eightAFirst: "yes"}, //end game return home
+]
+
+var $leftButton = [
+  {buttonOption: "Investigate!"},
+  {buttonOption: "Run Away!"},
+  {buttonOption: "Sure!"},
+  {buttonOption: "Continue on!"},
+  {buttonOption: "Duet with songbird"},
+  {buttonOption: "Continue!"},
+  {buttonOption: "Take a shortcut!"},
+  {buttonOption: "Take a shortcut!"},
+  {buttonOption: "Continue!"},
+  {buttonOption: "Continue!"},
+  {buttonOption: "Step left!"},
+  {buttonOption: "yes"},
+  {buttonOption: "yes"}
+]
+
+var $rightButton = [
+  {optionTwo: "Continue!"},
+  {optionTwo: "Sorry, can't be weighted down!"},
+  {optionTwo: "Sorry, I'm more of a solist."},
+  {optionTwo: "Take the safe route."},
+  {optionTwo: "Take the safe route."},
+  {optionTwo: "Step right"},
+
+]
 
 
-//
-if
-
-
-//
 
 
 
@@ -92,16 +114,16 @@ var j = 0;
         // $('#front').html("You chose path one")
         $('#maincard').fadeTo()
 
-        $('#button1').html($firstStory[step].story1)
-        $('#button2').html($secondStory[step].story2)
+        $('#button1').html($leftButton[step].buttonOption)
+        $('#button2').html($rightButton[step].optionTwo)
         step++
       })
         $('#button1').click(function() {
-          $('#maincard').html($storyCards[i].story1)
+          $('#maincard').html($storyCards[i])
           i++
       })
         $('#button2').click(function() {
-          $('#maincard').html($secondStory[j].story2)
+          $('#maincard').html($storyCards[j])
           j++
         })
 
