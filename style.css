@@ -1,19 +1,26 @@
-
-
 @keyframes background {
-  from {background-position: 300 0px;}
- to {background-position: 700% 0px;}
+  from {background-position: 100 0px;}
+ to {background-position: 100% 0px;}
  }
 
+
+#bodysize {
+  min-width: 900px;
+}
+
+
+
 #background	{
+  top: 0px;
 	width: 100%;
-	height: 1000px;
+	height: 810px;
 	background-image: url(1234.png);
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
   margin-bottom: 0;
-  animation: background 50s linear infinite;
-  animation-direction:alternate;
+  animation: background 5s linear infinite;
+  animation-direction:alternate-reverse;
+
 }
 
 
@@ -25,15 +32,15 @@
   font-variant: small-caps;
   font-size: 45px;
   opacity: .7;
-  height: 300px;
-  width: 650px;
+  height: 250px;
+  width: 600px;
   border: 6px white solid;
   position: fixed;
-  right: 400px;
-  top: 300px;
+  right: 360px;
+  top: 250px;
+  bottom: 250px;
   padding: 25px;
-  /*margin-left: auto;
-  margin-right: auto;*/
+
 
 }
 
@@ -44,12 +51,15 @@
   float: left;
   margin-left: 300px;
   position: fixed;
-  right: 540px;
-  top: 600px;
+  right: 495px;
+  top: 550px;
 }
 
 #button1, #button2 {
   height: 100px;
   width: 200px;
+  font-size: 10px;
+  font-variant: small-caps;
+
 
 }
