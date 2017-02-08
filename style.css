@@ -4,11 +4,6 @@
  }
 
 
-#bodysize {
-  min-width: 900px;
-}
-
-
 
 #background	{
   top: 0px;
@@ -30,7 +25,7 @@
   color: white;
   text-align: center;
   font-variant: small-caps;
-  font-size: 45px;
+  font-size:20px;
   opacity: .7;
   height: 250px;
   width: 600px;

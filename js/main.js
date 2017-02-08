@@ -119,7 +119,7 @@ var $steps = [
     mainText: "The fox tentatively walks to the bush and calls out “Hello in there?”. A small brown squirrel jumps out of the bush, “Hiya Mr. Fox!” The squirrel asks you to take a note to his friend at the top on the mountain. Will you?",
     leftButton: {
       text: "Sure!",
-      nextstep: "oneC"
+      nextStep: "oneC"
     },
     rightButton: {
       text: "Sorry, can't be weighted down!",
@@ -129,7 +129,7 @@ var $steps = [
 
     {
       step: "oneC",
-    mainText: "Sure thing squirelley!",
+    mainText: "Sure thing squireley!",
     leftButton: {
       text: "Continue on!",
       nextStep: "twoBase"
@@ -256,39 +256,72 @@ var i = 0;
 var j = 0;
 
 
-$steps[$steps.map(function(e) {
-    e.step
-}).indexOf($steps[step].leftButton.nextStep)
+// $steps[$steps.map(function(e) {
+//     e.step
+// }).indexOf($steps[step].leftButton.nextStep)
+//
+// $steps.map(function(e) {
+//     return (e.name)}.indexOf(step)
 
-$steps.map(function(e) {
-    return (e.name)}.indexOf(step)
+
+// var $steps = 0;
 
 
-    $('.button').click(function(e){
-        // $('#front').html("You chose path one")
-        $('#maincard').fadeTo()
 
-        $('#button1').html($steps[$steps.map].leftButton.text)
-        $('#button2').html($steps[step].rightButton.text)
-        step++
-      })
-        $('#button1').click(function() {
-          step = $steps[$steps.map(function(e) {
-              e.step
-          }).indexOf($steps[i].leftButton.nextStep)]
-          $('#maincard').html($steps[i].mainText)
-          i++
-      })
-        $('#button2').click(function() {
-          step = $steps[$steps.map(function(e) {
-              e.step
-          }).indexOf($steps[j].rightButton.nextStep)]
-          $('#maincard').html($steps.map.mainText)
-          j++
-        })
+// click maincard div to start game, load first step
+$('#maincard').click(function (start) {
+      nextCard($steps[1])
+  })
 
-//     // $('#path2').click(function(){
-//     //   $('#front').html("You chose path two")
-//     //   $('#path2').html("character two")
-//     //
-//     // })
+// creates function that searches array of objects for the next step in it's sequence.
+// fills the html of selected div with information specified in it's corresponding place in object.
+// stepNext being paramater for nextStep
+  function nextCard(stepNext) {
+    $('#maincard').html(stepNext.mainText)
+    $('#button1').html(stepNext.leftButton.text).attr('data-next-step', stepNext.leftButton.nextStep)
+    $('#button2').html(stepNext.rightButton.text).attr('data-next-step', stepNext.rightButton.nextStep)
+}
+
+$('.button').click(function(e){
+    var nextStep = $(this).attr("data-next-step")
+    var step = $steps.find(function (s){
+        return (s.step == nextStep)
+
+    })
+    console.log()
+    nextCard(step)
+})
+
+
+// $('#button').click(function (playgame) {
+//     $('#maincard').html($steps[step].mainText)
+//     $('#button1').html($steps[step].leftButton.text.nextStep)
+//     $('#button2').html($steps[step].rightButton.text.nextStep)
+//     $steps = 0,
+//     $step++
+//
+// })
+//
+//     $('.button').click(function(e){
+//         // $('#front').html("You chose path one")
+//         $('#maincard').fadeTo()
+//
+//         $('#button1').html($steps[0]leftButton.text)
+//
+//         $('#button2').html($steps[step].rightButton.text)
+//         step++
+//       })
+//         $('#button1').click(function() {
+//           step = $steps[$steps.map(function(e) {
+//               e.step
+//           }).indexOf($steps[i].leftButton.nextStep)]
+//           $('#maincard').html($steps[i].mainText)
+//           i++
+//       })
+//         $('#button2').click(function() {
+//           step = $steps[$steps.map(function(e) {
+//               e.step
+//           }).indexOf($steps[j].rightButton.nextStep)]
+//           $('#maincard').html($steps.map.mainText)
+//           j++
+//         })
