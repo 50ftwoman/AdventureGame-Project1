@@ -1,3 +1,41 @@
+body {
+  text-align: center;
+  min-width: 900px;
+}
+
+/*#sky, #night, #stars {
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width: 100%;
+}
+
+#night {
+  z-index: 4;
+  opacity: 0;
+}
+
+#stars {
+  bottom: 200px;
+  background: transparent;
+  z-index: 5;
+  opacity: 0;
+
+}
+
+#moon {
+  position: absolute;
+  left: 45%;
+  top: 60%;
+  width: 168px;
+  height: 168px;
+  background: transparent url(http://images.clipartpanda.com/moon-clipart-black-and-white-35295301.jpg) no-repeat center center;
+  z-index: 6;
+  opacity: 0;
+}*/
+
 @keyframes background {
   from {background-position: 100 0px;}
  to {background-position: 100% 0px;}
@@ -5,16 +43,19 @@
 
 
 
+
 #background	{
   top: 0px;
 	width: 100%;
-	height: 810px;
-	background-image: url(1234.png);
+	height: 870px;
+  overflow: hidden;
+  background-image: url(1234.png);
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
-  margin-bottom: 0;
   animation: background 5s linear infinite;
   animation-direction:alternate-reverse;
+  margin-bottom: 0;
+
 
 }
 
@@ -22,19 +63,19 @@
 
 #maincard {
   background-color: silver;
-  color: white;
+  color: black;
   text-align: center;
   font-variant: small-caps;
-  font-size:20px;
+  font-size:30px;
   opacity: .7;
-  height: 250px;
+  height: 300px;;
   width: 600px;
   border: 6px white solid;
-  position: fixed;
-  right: 360px;
-  top: 250px;
-  bottom: 250px;
-  padding: 25px;
+  padding: 50px 10px 20px 10px;
+  position: relative;
+  display: block;
+  margin: 200px auto 0 auto;
+
 
 
 }
@@ -43,18 +84,40 @@
 
 
 #button-container {
-  float: left;
-  margin-left: 300px;
-  position: fixed;
-  right: 495px;
-  top: 550px;
+
+  /*margin-left: 300px;*/
+  position: relative;
+  /*right: 495px;
+  top: 550px;*/
+  height: 105px;
+  width: 600px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 auto;
+
+
+}
+
+#startButton {
+  height: 100px;
+  width: 400px;
+  border: 2px white solid;
+  z-index: 3;
+
 }
 
 #button1, #button2 {
   height: 100px;
-  width: 200px;
+  width: 280px;
   font-size: 10px;
   font-variant: small-caps;
+  overflow: auto;
+}
 
-
+#contButton {
+  height: 100px;
+  width: 400px;
+  border: 2px white solid;
+  
 }
