@@ -113,11 +113,15 @@ body {
   font-size: 10px;
   font-variant: small-caps;
   overflow: auto;
+  display: none;
 }
 
 #contButton {
   height: 100px;
   width: 400px;
   border: 2px white solid;
-  
+  background-color: black;
+  color: white;
+  display: none;
+
 }

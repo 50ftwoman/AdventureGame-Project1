@@ -122,7 +122,9 @@ var $steps = [
       text: "Continue!",
       nextStep: "nineBase"
     },
-    rightButton: ""
+    rightButton: {
+      text: ""
+    }
   },
   {
     step: "sixBase",
@@ -174,11 +176,11 @@ var $steps = [
  // click maincard div to start game, load first step
  $('.bigButton').click(function (start) {
        nextCard($steps[1])
-       $('.button').toggle()
-       $('.bigButton').hide().on('click')
+       $('.button').show()
+       $('.bigButton').toggle()
 
 
-   })
+    })
 
 
  // creates function to go to specified nextStep object in array
@@ -187,43 +189,90 @@ var $steps = [
    function nextCard(stepNext) {
      $('#maincard').html(stepNext.mainText)
      $('#button1').html(stepNext.leftButton.text).attr('data-next-step', stepNext.leftButton.nextStep)
-     $('#button2').html(stepNext.rightButton.text).attr('data-next-step', stepNext.rightButton.nextStep),
-      function hideButtons(hide) {
-            if (nextCard == "") {
-              $(this).hide()
+     $('#button2').html(stepNext.rightButton.text).attr('data-next-step', stepNext.rightButton.nextStep)
+          if (stepNext.rightButton.text === "") {
+            $('.button').hide()
+              $('.buttonOn').show().html(stepNext.leftButton.text).attr('data-next-step', stepNext.leftButton.nextStep)
+          }
+    //  $('.buttonOn').click(function(ev) {
+    //    if (nextStep == "") {
+    //      $('.button').css({'display':'block'})
+    //      $('#contButton').show()
+    //    }
+    //  })
+
+}
+
+
+// on click finds step, sets to data card
+// searches for 'step' in array from matching nextStep in button object
+
+
+$('.button').click(function(e){
+    var nextStep = $(this).attr("data-next-step")
+    var step = $steps.find(function(s){
+        return (s.step == nextStep);
+  // $('.button').click(function(hide) {
+
+     })
+              // })
+nextCard(step)
+})
+
+
+if (text === "") {
+
+  $('.button').hide()
+  $('.buttonOn').show()
+      $('.buttonOn').html(stepNext.leftButton.text).attr('data-next-step', stepNext.leftButton.nextStep)
+ }
+
+// removeClick2 = function(ev) {
+//   for (this.nextStep === "") {
+//     $('#button2').toggle()
+//
+//   }
+// }
+
+
+
+// $('.buttonOn').click(function(ev) {
+//   if (nextStep == "") {
+//     $('.button').hide()
+//     $('#contButton').show()
+//   }
+// })
+            // }  else {
+            //     $('#button2').show()
+            //   }
+
+
               // $('#contButton').html(stepNext.leftButton.text).attr('data-next-step', stepNext.leftButton.nextStep)
-            }
+
 
           // if ('rightButton' == "") {
           //     this.removeEventListener.('click')
           //   } else {
           //      $('#button2').show()
           //    }
-}
-}
+// }
+// }
+//
+//
+// html(stepNext.leftButton.text).attr('data-next-step', stepNext.leftButton.nextStep)
+//
+//
+
+//   function m() {
+// if (stepNext === "") {
+//   $('.button').toggle()
+//   $('.buttonOn').show()
+//         }
+  //  else {
+  //    $('#button2').show()
+  //  }
 
 
-
-
- // on click finds step, sets to data card
- // searches for 'step' in array from matching nextStep in button object
- $('.button').click(function(e){
-     var nextStep = $(this).attr("data-next-step")
-     var step = $steps.find(function (s){
-         return (s.step == nextStep)
-      //   function m() {
-      // if (nextStep === "") {
-      //   $('.button').removeEventListener('click', nextStep).hide()
-      //   $('.buttonOn').addEventlistener('click', nextStep).show()
-      //   }
-      //   //  else {
-      //   //    $('#button2').show()
-      //   //  }
-        //  }
-       })
-        nextCard(step)
-
-    })
 
  // function hideButtons(hide) {
  //   $('#button2').hide()
