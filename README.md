@@ -25,10 +25,10 @@ The player will be able to choose a character and continue through five differen
  ## Wireframes: 
  
  
- ![lofi_wireframe] (/Users/svetmaillet/code/Project1/Assets/IMG_3472.JPG)
+ ![lofi_wireframe] (./Assets/IMG_3472.JPG)
  
- ![lofi_wireframe2] (/Users/svetmaillet/code/Project1/Assets/IMG_3473.JPG)
+ ![lofi_wireframe2] (./Assets/IMG_3473.JPG)
  
- ![lofi_wireframe3] (Project1/Assets/IMG_3474.JPG)
+ ![lofi_wireframe3] (./Assets/IMG_3474.JPG)
  
  
