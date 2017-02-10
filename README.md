@@ -1,4 +1,5 @@
-# Project One: Choose Your Own Story Game
+# Project One: Mr. Raccoons Quest for Sunset
+
 
 
 ## Introduction
@@ -7,7 +8,13 @@ In this project I will design and create an interactive "choose your own" advenu
 
 
 ## Approach
-The player will be able to choose a character and continue through five different prompts, navigating down either a "dangerous" path with multiple options for failure, or a "safe" path that will be playable no matter which option until the final card when a player must make a game winning decision. For each slide choice, a character animation will slide from the side of the screen giving a visual representation of the story being told. 
+Logic consists of redirecting appropriate answer to corresponding card. 
+
+The player will be able to choose a character and continue through five different prompts, navigating down either a "dangerous" path with multiple options for failure, or a "safe" path that will be playable no matter which option until the final card when a player must make a game winning decision. Each slide will be represented by a visual aide corresponding to the situation or character. 
+
+## Installation
+* pull from github
+* open browser
 
 
 
@@ -21,6 +28,12 @@ The player will be able to choose a character and continue through five differen
  *  HTML
  *  Javascript
  *  JQUERY
+ *  Photoshop
+ *  Illustrator 
+
+ ## Unresolved 
+ * Button display issues
+ * Reset issues
 
  ## Wireframes: 
  
