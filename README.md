@@ -1,6 +1,6 @@
 # Project One: Mr. Raccoons Quest for Sunset
 
-![lofi_wireframe] (./Assets/startCard.jpg)
+![lofi_wireframe] (./Assets/startcard.jpg)
 
 
 ## Introduction
